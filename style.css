@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121215;
+    color: #EAEAEA;
+
+    display: grid;
+    grid-template-areas: "profile timeline";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh;
+}
+
+nav {
+    padding: 64px;
+    grid-area: timeline;
+
+    overflow-y: scroll;
+}
+
+.memory {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    text-decoration: none;
+    margin-bottom: 4rem;
+}
+
+.memory small {
+    color: #BEBEBF;
+    font-size: .75rem;
+}
+
+.memory h1 {
+    font-size: 2rem;
+    color: #EAEAEA;
+}
+
+.memory img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.memory p {
+    font-size: 1.125rem;
+    color: #BEBEBF;
+    line-height: 1.75rem;
+}
+
+aside {
+    grid-area: profile;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+
+    border-right: 1px solid;
+    border-image: linear-gradient(#727275, #2C2C31) 1;
+
+    background-image: url(./assets/background.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+aside img:nth-child(2) {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+
+    border: 4px solid transparent;
+    background: linear-gradient(#D39333, #ED5636, #633BBC)
+        padding-box,linear-gradient(260deg, #D39333, #ED5636, #633BBC) border-box;
+}
+
+aside p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+aside span {
+    font-size: .75rem;
+    color: #9E9EA0;
+}
